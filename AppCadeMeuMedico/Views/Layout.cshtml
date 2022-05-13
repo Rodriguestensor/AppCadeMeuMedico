@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cade meu medico? - @ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+    <style>
+        body {
+            padding-top: 0px;
+        }
+
+        #barraH {
+            padding-top: 0px;
+            background-color: black;
+        }
+
+        #nomeHeader {
+            color: darkgray;
+        }
+
+        #homeLink {
+            color: white;
+            font-size: 14px;
+        }
+
+        a.paisesLink {
+            color: white;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+            
+       
+    </style>
+</head>
+<body>
+    <div id="barraH" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a id="nomeHeader" class="navbar-brand" href="#">Cadê meu medico?</a>
+                <a id="homeLink" class="navbar-brand" href="#">Home</a>
+                @Html.ActionLink("Países", "Index", "Home", new { @class = "paisesLink" })
+
+
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        @RenderBody()
+
+    </div>
+    <script src="@Url.Content("~/Scripts/jquery-3.6.0.min.js")">
+    </script>
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")">
+    </script>
+
+    @RenderSection("script", required: false)
+</body>
+</html>
+
