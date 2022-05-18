@@ -28,14 +28,12 @@
             font-size: 14px;
         }
 
-        a.paisesLink {
+        a.MedicosLink {
             color: white;
-            font-size: 14px;
+            font-size: 16px;
             text-decoration: none;
+            margin-right : 10px;
         }
-
-            
-       
     </style>
 </head>
 <body>
@@ -43,15 +41,15 @@
         <div class="container">
             <div class="navbar-header">
                 <a id="nomeHeader" class="navbar-brand" href="#">Cadê meu medico?</a>
-                <a id="homeLink" class="navbar-brand" href="#">Home</a>
-                @Html.ActionLink("Países", "Index", "Home", new { @class = "paisesLink" })
-
+                @Html.ActionLink("Início", "Index", "Home","", new { @class = "MedicosLink" })              
+                @*@Html.ActionLink("Médicos", "Index", "Index", new { @class = "MedicosLink" })*@
+                @Html.ActionLink("Médicos", "Index", "Medicos", "", new { @class = "MedicosLink" })
 
             </div>
 
         </div>
     </div>
-    
+
     <div class="container">
         @RenderBody()
 
